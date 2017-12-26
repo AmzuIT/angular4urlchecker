@@ -1,0 +1,14 @@
+<div>
+    <mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let environment">{{environment.name}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="url">
+        <mat-header-cell *matHeaderCellDef> Url </mat-header-cell>
+        <mat-cell *matCellDef="let environment"> {{environment.url}} </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let environment; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>

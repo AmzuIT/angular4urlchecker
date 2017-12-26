@@ -1,0 +1,8 @@
+
+<mat-tab-group>
+ <span *ngFor="let environment of environments">
+ <mat-tab label="{{ environment.title }}">
+    <app-list-table data="{{ environment.urls }}"></app-list-table>
+ </mat-tab>
+</span>
+</mat-tab-group>
